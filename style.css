@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    
+}
+
+
+
+nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+   
+}
+
+.logo{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    margin: 25px 40px;
+}
+.logo img{
+    width: 100%;
+    border-radius: 50px;
+}
+
+.nav-links{
+    margin-right: 40px;
+}
+
+.nav-links li{
+    display: inline-block;
+    margin-left: 40px;
+    list-style: none;
+    
+}
+
+.nav-links li a{
+    text-decoration: none;
+    color: #f9629f;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-links li a:hover{
+    background-color: #f9629f;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.nav-links li a.active{
+    background-color: #f9629f;
+    color: #fff;
+    border-radius: 5px;
+}
+
+section{
+    
+    background-color: #faf9f6;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3));
+    position: relative;
+    padding: 0.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.content h1{
+    color: #d00456;
+    font-size: 3rem;
+}
+.content p{
+    color: #fff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.back-video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.bio-container{
+    padding: 60px 80px;
+
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.bio-info{
+    flex: 1 1 45rem;
+}
+.bio-image{
+    flex: 1 1 35rem;
+}
+
+.bio-image image{
+    width: 100%;
+}
+.bio-info h1{
+    font-size: 3rem;
+    color: #f9629f;
+    font-weight: 600;
+
+}
+.bio-info p{
+    margin-top: 10px;
+    line-height: 1.5;
+    color: #818589;
+}
+
+footer{
+    padding: 60px 12%;
+    background-color: #252424;
+}
+.quick-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.socials ul{
+    display: flex;
+    list-style: none;
+}
+.socials li a{
+    text-decoration: none;
+    color: #f9629f;
+    font-size: 2rem;
+    padding: 15px;
+}
+
+.socials li a:hover{
+    transform: scale(1.02);
+}
+
+.contact-info ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+.contact-info ul li{
+    padding: 15px;
+    color: white;
+}
+.contact-info ul li i{
+    margin-right: 5px;
+    color: #f9629f;
+    font-size: 1.8rem;
+}
+
