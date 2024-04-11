@@ -11,7 +11,7 @@ html{
 }
 
 
-
+/* ****** Home ********/
 nav{
     position: absolute;
     top: 0;
@@ -102,9 +102,39 @@ section{
     font-size: 3rem;
 }
 .content p{
+    margin-top: 10px;
     color: #fff;
     font-size: 1.5rem;
     text-align: center;
+}
+p.brief{
+    font-size: 1.1rem;
+    color: #eee5e5;
+}
+
+.hire-me{
+    margin-top: 15px;
+    background: #d00456;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px rgba(208, 4, 86, 0.69), -2px -2px 4px rgba(208, 4, 86, 0.685);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    
+    
+}
+.hire-me:hover{
+    background: #f9629f;
+}
+
+.hire-me a{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 30px;
+    font-size: 1.2rem;
+    
 }
 
 .back-video{
@@ -143,7 +173,69 @@ section{
     line-height: 1.5;
     color: #818589;
 }
+.services{
+    margin-top: 50px;
+    padding: 0 60px;
+    padding-bottom: 40px;
+}
+.services h2{
+    text-align: center;
+    color: #f9629f;
+    font-size: 2.5rem;
+}
+.services h2 i{
+    color: #d00456;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-right: 7px;
+}
 
+.services p{
+    margin-top: 20px;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    color: #6a6868;
+}
+
+.services-container{
+    margin-top: 40px;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    place-items: center;
+}
+.services-box{
+    border: 2px rgba(47, 46, 46, 0.1) solid;
+    border-radius: 10px;
+    background: #fff;
+    transition: all 0.3s ease;
+    text-align: center;
+    padding: 20px;
+    line-height: 3;
+}
+
+.services-box:hover{
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4), -2px -2px 3px rgba(0, 0, 0, 0.4);
+    border: none;
+    outline: none;
+}
+
+.services-box .icons{
+    color: #d00456;
+    font-size: 2.5rem;
+}
+.services-box h3{
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.services-box p{
+    line-height: 1.5;
+    color: #6a6868;
+    font-size: 1rem;
+}
+/* ****** Footer ********/
 footer{
     padding: 60px 8%;
     background-color: #252424;
@@ -168,6 +260,7 @@ footer{
 }
 
 .socials li a:hover{
+    color: #d00456;
     transform: scale(1.02);
 }
 
@@ -194,7 +287,7 @@ iframe{
 
 
 
-
+/********* About Page*********/
 .hero{
     background:rgba(0, 0, 0, 0.9) url("./images/backg-image.png");
     background-size: cover;
@@ -304,6 +397,7 @@ iframe{
     margin-top: 15px;
 }
 
+/********* Contact Page **********/
 .contact-container{
     width: 100%;
     height: 100vh;
@@ -461,6 +555,13 @@ iframe{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+
+.box h3{
+    margin-top: 8px;
+    text-align: center;
+    color: #f9629f;
+}
+
 .box p{
     padding: 7px;
     color: #444242;
