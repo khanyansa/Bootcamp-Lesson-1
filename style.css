@@ -7,6 +7,7 @@
 
 html{
     scroll-behavior: smooth;
+    scroll-padding-top: 110px;
     
 }
 
@@ -35,6 +36,12 @@ nav{
 .logo img{
     width: 100%;
     border-radius: 50px;
+}
+
+.menu-bar i{
+    color: #f9629f;
+    font-size: 1.8rem;
+    display: none;
 }
 
 
@@ -405,6 +412,66 @@ iframe{
     color: #d00456;
     font-size: 1.7rem;
 }
+
+.projects {
+    margin-top: 80px;
+}
+
+.projects-container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.box {
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6), -3px -3px 3px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.box:hover {
+    transform: scale(1.02);
+}
+
+.box img {
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.box h3 {
+    margin-top: 8px;
+    text-align: center;
+    color: #f9629f;
+}
+
+.box p {
+    padding: 7px;
+    color: #444242;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.project-links {
+    text-align: center;
+    padding-bottom: 8px;
+    font-size: 2rem;
+}
+
+.project-links a i {
+    padding: 5px;
+    color: #d00456;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.project-links a i:hover {
+    color: #f9629f;
+}
+
 .connect{
     margin-top: 50px;
 }
@@ -415,10 +482,50 @@ iframe{
     margin-top: 15px;
 }
 
+.goals{
+    margin-top: 40px;
+}
+.goals-box{
+    padding-top: 50px;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-wrap: wrap;
+}
+
+.goals-content{
+    flex: 1 1 60rem;
+}
+
+.goals-content h3{
+    color: #d00456;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.goals-content h4{
+    color: #f9629f;
+}
+
+.goals-content p{
+    color: #6a6868;
+    line-height: 1.5;
+    letter-spacing: 1px;
+}
+
+.goals-image{
+    flex: 1 1 25rem;
+}
+
+.goals-image img{
+    width: 100%;
+}
+
 /********* Contact Page **********/
 .contact-container{
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: rgba(15, 15, 15, 0.8);
 }
 .contact-section{
@@ -428,11 +535,12 @@ iframe{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
 }
 
 .wrap{
+    margin-top: 40px;
     position: relative;
     z-index: 1000;
     width: 100%;
@@ -453,6 +561,59 @@ iframe{
     color: #f9629f;
     margin-bottom: 20px;
 }
+
+.contact-section p{
+    text-align: center;
+    color: #fff;
+    font-size: 1.1rem;
+    letter-spacing: 1.1px;
+    line-height: 1.5;
+}
+
+.contact-details {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.contact-box i {
+    margin-left: 10px;
+    background: #d00456;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.contact-icons i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-wrap {
+    margin-left: 10px;
+}
+
+.contact-wrap h3 {
+    font-size: 1.3rem;
+    color: #f9629f;
+}
+
+.contact-wrap p {
+    color: #fff;
+    line-height: 1.5;
+}
+
 
 .contact-section .row{
     position: relative;
@@ -549,54 +710,4 @@ iframe{
     border-radius: 5px;
 }
 
-.projects{
-    margin-top: 80px;  
-}
-.projects-container{
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2.5rem;
-    align-items: center;
-}
-.box{
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.6), -3px -3px 3px rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    transition: all 0.3s ease;
-}
-.box:hover{
-    transform: scale(1.02);
-}
-.box img{
-    width: 100%;
-    height: 250px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
 
-.box h3{
-    margin-top: 8px;
-    text-align: center;
-    color: #f9629f;
-}
-
-.box p{
-    padding: 7px;
-    color: #444242;
-    line-height: 1.5;
-    font-size: 1rem;
-}
-.project-links{
-    text-align: center;
-    padding-bottom: 8px;
-    font-size: 2rem;
-}
-.project-links a i{
-    padding: 5px;
-    color: #d00456;
-    cursor: pointer;
-    transition: all 0.4s ease;
-}
-.project-links a i:hover{
-    color: #f9629f;
-}
