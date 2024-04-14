@@ -23,6 +23,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     
+    
    
 }
 
@@ -339,12 +340,11 @@ footer{
 
 /********* About Page*********/
 .hero{
-    background:rgba(0, 0, 0, 0.9) url("./images/backg-image.png");
+    background:rgba(0, 0, 0, 0.9) url("./images/About2.jpg");
     background-size: cover;
     background-position: center;
     height: 100vh;
     
-    backdrop-filter: blur(20px);
 }
 
 .about {
@@ -357,7 +357,7 @@ footer{
 .heading{
     margin-top: 190px;
     text-align: center;
-    color: #d2c0c9;
+    color: #f9629f;
     font-size: 3rem;
     font-weight: 600;
     position: relative;
@@ -377,7 +377,7 @@ footer{
 .about p{
     margin-top: 15px;
     text-align: center;
-    color: #d2d3d3;
+    color: #f5fefd;
     font-size: 1.5rem;
 }
 
@@ -567,7 +567,7 @@ footer{
 .wrap{
     margin-top: 40px;
     position: relative;
-    z-index: 1000;
+    z-index: 999;
     width: 100%;
     max-width: 1000px;
     padding: 50px;
