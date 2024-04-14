@@ -136,8 +136,13 @@ section{
     text-align: center;
 }
 p.brief{
+    padding: 0 20px;
     font-size: 1.1rem;
     color: #eee5e5;
+}
+
+p.brief br{
+    display: none;
 }
 
 .hire-me{
@@ -262,6 +267,7 @@ p.brief{
     line-height: 1.5;
     color: #6a6868;
     font-size: 1rem;
+    
 }
 /* ****** Footer ********/
 footer{
@@ -307,11 +313,6 @@ footer{
     color: #f9629f;
     font-size: 1.8rem;
 }
-
-/* iframe{
-    width: 350px;
-    height: 200px;
-} */
 
 .map iframe{
     width: 100%;
@@ -360,23 +361,13 @@ footer{
     color: #f9629f;
     font-size: 3rem;
     font-weight: 600;
-    position: relative;
+    /* position: relative; */
 }
 
-.heading::after{
-    content: "";
-    height: 3px;
-    width: 40%;
-    background-color: #d00456;
-    position: absolute;
-    left: 350px;
-    bottom: -5px;
-    box-shadow: 0 2px 2px rgba(255, 3, 87, 0.4);
-}
 
 .about p{
     margin-top: 15px;
-    text-align: center;
+    text-align: justify;
     color: #f5fefd;
     font-size: 1.5rem;
 }
@@ -594,6 +585,9 @@ footer{
     letter-spacing: 1.1px;
     line-height: 1.5;
 }
+.contact-section p br{
+    display: none;
+}
 
 .contact-details {
     margin-top: 50px;
@@ -733,6 +727,12 @@ footer{
 
 /************* Media Queries ************/
 
+@media screen and (max-width: 1138px){
+    .services p br{
+        display: none;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .contact-info ul{
         flex-direction: column;
@@ -786,6 +786,9 @@ footer{
         transform: translateY(0);
     }
     
+    .services p{
+        text-align: justify;
+    }
 
     .skills-container, .goals-box, .bio-container {
         flex-direction: column;
@@ -814,7 +817,6 @@ footer{
         
     }
     .about h1.heading{
-        /* font-size: 2.5rem; */
         color: #d00456;
     }
     .about h1.heading::after{
@@ -822,11 +824,16 @@ footer{
         width: 0;
     }
 
-    
+    br{
+        display: none;
+    }
 
     .about p{
         font-size: 1rem;
         margin-top: 5px; 
+    }
+    .contact-section p{
+        text-align: justify;
     }
     .contact-details{
         flex-direction: column;
@@ -868,8 +875,12 @@ footer{
         }
         .services p{
             font-size: 1.1rem;
+            text-align: left;
         }
 
+        br{
+            display: none;
+        }
         .about{
             padding: 10px 20px;
         }
@@ -880,11 +891,16 @@ footer{
         .about p{
             font-size: 1.1rem;
         }
+
+        .connect p{
+            text-align: left;
+        }
         .contact-section h1{
             font-size: 2rem;
         }
         .contact-section p{
             font-size: 1rem;
+            text-align: left;
         }
         .contact-box .contact-wrap p{
             font-size: 0.9rem;
