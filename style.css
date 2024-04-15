@@ -497,6 +497,48 @@ footer{
     color: #444242;
     text-align: center;
     margin-top: 15px;
+    
+}
+.edu-container{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.edu-box{
+    padding: 20px;
+    line-height: 1.5;
+}
+.edu-box h3{
+    font-size: 1.3rem;
+    color: #d00456;
+    font-weight: 500;
+}
+.edu-box h3.qualification{
+    color: #f9629f;
+    font-size: 1.2rem;
+}
+.edu-box p{
+    color: #6a6868;
+    font-size: 1.1rem;
+}
+.edu-box p span{
+    color: #f9629f;
+    font-weight: 500;
+}
+.edu h1{
+    text-align: center;
+    margin-top: 40px;
+    color: #f9629f;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.edu h1 i{
+    color: #d00456;
+    margin-right: 10px;
+    font-size: 2.5rem;
 }
 
 .goals{
