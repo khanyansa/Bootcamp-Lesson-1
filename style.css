@@ -146,12 +146,13 @@ p.brief br{
     display: none;
 }
 
+
 .hire-me{
     margin-top: 15px;
     background: #d00456;
     border: none;
     outline: none;
-    border-radius: 20px;
+    border-radius: 30px;
     box-shadow: 2px 2px 4px rgba(208, 4, 86, 0.69), -2px -2px 4px rgba(208, 4, 86, 0.685);
     cursor: pointer;
     transition: all 0.4s ease;
@@ -166,7 +167,7 @@ p.brief br{
     display: inline-block;
     color: #fff;
     text-decoration: none;
-    padding: 20px 30px;
+    padding: 15px 20px;
     font-size: 1.2rem;
     
 }
