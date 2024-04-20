@@ -87,7 +87,7 @@ contentDiv.classList.add('content');
 contentDiv.innerHTML = `
     <h1>Welcome To Nokukhanya's Portfolio</h1>
     <p>I create beautiful, responsive websites that drive results.</p>
-    <p class="brief">I'm a Passionate web developer, creating engaging websites. My experties lies in the
+    <p class="brief">I'm a passionate web developer, creating engaging websites. My experties lies in the
         front-end development, <br>with a focus of creating clean, efficient websites to bring ideas to life.
     </p>
     <div class="hire-me">

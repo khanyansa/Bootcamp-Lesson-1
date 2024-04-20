@@ -119,7 +119,7 @@ skillsSection.innerHTML = `
             <div class="box">
                 <img src="./images/Travel-project.png" alt="">
                 <h3>Traveling Agency</h3>
-                <p>Traveling agancy website is designed for travellers who want to explore the world. it is built using only HTML and CSS</p>
+                <p>Traveling agancy website is designed for travellers who want to explore the world. it was built using only HTML and CSS</p>
                 <div class="project-links">
                     <a href="https://zntravels.netlify.app/" target="_blank"><i class="fa-solid fa-link"></i></a>
                     <a href="https://github.com/khanyansa/Travel-Website" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -129,7 +129,7 @@ skillsSection.innerHTML = `
             <div class="box">
                 <img src="./images/Weather-project.png" alt="">
                 <h3>Weather App</h3>
-                <p>Weather web app that fetches weather data from an API and displays it to the user based on ther location.</p>
+                <p>Weather web app that fetches weather data from an API and displays it to the user based on their location.</p>
                 <div class="project-links">
                     <a href="https://znweather.netlify.app/" target="_blank"><i class="fa-solid fa-link"></i></a>
                     <a href="https://github.com/khanyansa/Weather-App" target="_blank"><i class="fa-brands fa-github"></i></a>
