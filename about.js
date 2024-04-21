@@ -1,4 +1,3 @@
-// Header
 let heroDiv = document.createElement('div');
 heroDiv.classList.add('hero');
 
@@ -82,136 +81,191 @@ heroDiv.appendChild(aboutSection);
 
 document.body.appendChild(heroDiv);
 
-// Skills
-let skillsSection = document.createElement('section');
-skillsSection.classList.add('skills');
 
-skillsSection.innerHTML = `
-    <h2><i class="fa-solid fa-code"></i>Skills</h2>
-    <div class="skills-container">
-        <div class="skills-content">
-            <p>I've always been fascinated by technology and its potential to transform the way we interact with the world. when I dove headfirst into coding and never looked back.I then honed my skills in fronf-end development languages and tools including:</p>
-            <ul>
-                <li><i class="fa-brands fa-html5"></i><span>HTML</span></li>
-                <li><i class="fa-brands fa-css3-alt"></i><span>CSS</span></li>
-                <li><i class="fa-brands fa-js"></i><span>JavaScript</span></li>
-                <li><i class="fa-brands fa-github"></i><span>GitHub</span></li>
-            </ul>
-        </div>
-        <div class="skills-image">
-            <img src="./images/bg-about.svg" alt="">
-        </div>
-    </div>
+// Skills Data
+const skillsData = [
+  { icon: "fa-html5", text: "HTML" },
+  { icon: "fa-css3-alt", text: "CSS" },
+  { icon: "fa-js", text: "JavaScript" },
+  { icon: "fa-github", text: "GitHub" }
+];
 
-    <div class="projects">
-        <h2><i class="fa-solid fa-gears"></i> Projects</h2>
-        <div class="projects-container">
-            <div class="box">
-                <img src="./images/Calculator-Project2.jpg" alt="">
-                <h3>Calculator</h3>
-                <p>Calculator that performs basic arithmetic operations like addition, subraction, multiplication, and division.</p>
-                <div class="project-links">
-                    <a href="https://zncalculator.netlify.app/" target="_blank"><i class="fa-solid fa-link"></i></a>
-                    <a href="https://github.com/khanyansa/Calculator" target="_blank"><i class="fa-brands fa-github"></i></a>
-                </div>
-                
-            </div>
-            <div class="box">
-                <img src="./images/Travel-project.png" alt="">
-                <h3>Traveling Agency</h3>
-                <p>Traveling agancy website is designed for travellers who want to explore the world. it was built using only HTML and CSS</p>
-                <div class="project-links">
-                    <a href="https://zntravels.netlify.app/" target="_blank"><i class="fa-solid fa-link"></i></a>
-                    <a href="https://github.com/khanyansa/Travel-Website" target="_blank"><i class="fa-brands fa-github"></i></a>
-                </div>
-                
-            </div>
-            <div class="box">
-                <img src="./images/Weather-project.png" alt="">
-                <h3>Weather App</h3>
-                <p>Weather web app that fetches weather data from an API and displays it to the user based on their location.</p>
-                <div class="project-links">
-                    <a href="https://znweather.netlify.app/" target="_blank"><i class="fa-solid fa-link"></i></a>
-                    <a href="https://github.com/khanyansa/Weather-App" target="_blank"><i class="fa-brands fa-github"></i></a>
-                </div>
-                
-            </div>
-            <div class="box">
-                <img src="./images/Clock-project.png" alt="">
-                <h3>Digital Clock</h3>
-                <p>The website is designed to provide users with a simple yet elegant digital clock that displays time on their devices</p>
-                <div class="project-links">
-                    <a href="https://znclock.netlify.app/" target="_blank"><i class="fa-solid fa-link"></i></a>
-                    <a href="https://github.com/khanyansa/Digital-Clock" target="_blank"><i class="fa-brands fa-github"></i></a>
-                </div>
-                
-            </div>
-        </div>
-       
-    </div>
+// Projects Data
+const projectsData = [
+  {
+    image: "./images/Calculator-Project2.jpg",
+    title: "Calculator",
+    description: "Calculator that performs basic arithmetic operations like addition, subtraction, multiplication, and division.",
+    links: {
+      live: "https://zncalculator.netlify.app/",
+      github: "https://github.com/khanyansa/Calculator"
+    }
+  },
+  {
+    image: "./images/Travel-project.png",
+    title: "Traveling Agency",
+    description: "Traveling agency website designed for travelers who want to explore the world. It is built using only HTML and CSS.",
+    links: {
+      live: "https://zntravels.netlify.app/",
+      github: "https://github.com/khanyansa/Travel-Website"
+    }
+  },
+  {
+    image: "./images/Weather-project.png",
+    title: "Weather App",
+    description: "Weather web app that fetches weather data from an API and displays it to the user based on their location.",
+    links: {
+      live: "https://znweather.netlify.app/",
+      github: "https://github.com/khanyansa/Weather-App"
+    }
+  },
+  {
+    image: "./images/Clock-project.png",
+    title: "Digital Clock",
+    description: "Website designed to provide users with a simple yet elegant digital clock that displays time on their devices.",
+    links: {
+      live: "https://znclock.netlify.app/",
+      github: "https://github.com/khanyansa/Digital-Clock"
+    }
+  }
+];
 
-    <div class="connect">
-        <h2><i class="fa-brands fa-connectdevelop"></i>Let's Connect!</h2>
-        <p>I'm always on the lookout for exciting new opportunities to collaborate. Whether you have a project in mind or just want to network, feel free to reach out:</p>
-    </div>
-    <div class="edu">
-        <h1><i class="fa-solid fa-pen-to-square"></i>Education</h1>
-        <div class="edu-container">
-            <div class="edu-box">
-                <h3>Tswane University of Technology</h3>
-                <h3 class="qualification">Advanced Diploma in Industrial Physics</h3>
-                <p>2019 - 2021</p>
-                <p><span>Status:</span> Complete</p>
-            </div>
-            <div class="edu-box">
-                <h3>Tswane University of Technology</h3>
-                <h3 class="qualification">Diploma in Industrial Physics</h3>
-                <p>2022</p>
-                <p><span>Status:</span> Complete</p>
-            </div>
-        </div>
-    </div>
+// Education Data
+const educationData = [
+  {
+    university: "Tswane University of Technology",
+    qualification: "Advanced Diploma in Industrial Physics",
+    year: "2019 - 2021",
+    status: "Complete"
+  },
+  {
+    university: "Tswane University of Technology",
+    qualification: "Diploma in Industrial Physics",
+    year: "2022",
+    status: "Complete"
+  }
+];
 
-    <div class="goals">
-        <h2><i class="fa-solid fa-eye-low-vision"></i> Goals</h2>
-        <div class="goals-box">
-            <div class="goals-image">
-                <img src="./images/mission2.png" alt="">
-            </div>
-            <div class="goals-content">
-                <h3>Mission</h3>
-                <p>To create innovative and client-centered websites that empower businesses and individuals to achieve their goals effectively in the digital industry</p>
-            </div>
-        </div>
-        <div class="goals-box">
-            <div class="goals-content">
-                <h3>Vision</h3>
-                <p>To be a trusted web developer for clients recognised for delivering reliable, and exceptional digital experiences that drive success for clients and make a positive impact in the online world.</p>
-            </div>
-            <div class="goals-image">
-                <img src="./images/vision5.png" alt="">
-            </div>
-        </div>
-        <div class="goals-box">
-            <div class="goals-image">
-                <img src="./images/values4.jpg" alt="">
-            </div>
-            <div class="goals-content">
-                <h3>Values</h3>
-                <h4>Quality</h4>
-                <p>Commited to delivering high-quality websites that exceed client expectations</p>
-                <h4>Creativity</h4>
-                <p>Innovation to push the boundaries of web development and design</p>
-                <h4>Collaboration</h4>
-                <p>Open communication and collaboration with clients and team members to ensure the best out come.</p>
-            </div>
-        </div>
-    </div>
-`;
+// Goals Data
+const goalsData = [
+  {
+    title: "Mission",
+    description: "To create innovative and client-centered websites that empower businesses and individuals to achieve their goals effectively in the digital industry",
+    image: "./images/mission2.png"
+  },
+  {
+    title: "Vision",
+    description: "To be a trusted web developer for clients recognized for delivering reliable, and exceptional digital experiences that drive success for clients and make a positive impact in the online world.",
+    image: "./images/vision5.png"
+  },
+  {
+    title: "Values",
+    description: "",
+    image: "./images/values4.jpg",
+    values: [
+      { title: "Quality", description: "Committed to delivering high-quality websites that exceed client expectations" },
+      { title: "Creativity", description: "Innovation to push the boundaries of web development and design" },
+      { title: "Collaboration", description: "Open communication and collaboration with clients and team members to ensure the best outcome." }
+    ]
+  }
+];
 
-document.body.appendChild(skillsSection);
+// Skills Section
+function createSkillsHTML() {
+  const skillsSection = document.createElement('section');
+  skillsSection.classList.add('skills');
 
-// footer
+  //Skills
+  const skillsHeader = document.createElement('h2');
+  skillsHeader.innerHTML = '<i class="fa-solid fa-code"></i>Skills';
+  skillsSection.appendChild(skillsHeader);
+
+  const skillsContainer = document.createElement('div');
+  skillsContainer.classList.add('skills-container');
+
+  const skillsContent = document.createElement('div');
+  skillsContent.classList.add('skills-content');
+  skillsContent.innerHTML = `<p>I've always been fascinated by technology and its potential to transform the way we interact with the world. when I dove headfirst into coding and never looked back.I then honed my skills in fronf-end development languages and tools including:</p>`;
+
+  const skillsList = document.createElement('ul');
+  skillsData.forEach(skill => {
+    const skillItem = document.createElement('li');
+    skillItem.innerHTML = `<i class="fa-brands ${skill.icon}"></i><span>${skill.text}</span>`;
+    skillsList.appendChild(skillItem);
+  });
+  skillsContent.appendChild(skillsList);
+
+  const skillsImage = document.createElement('div');
+  skillsImage.classList.add('skills-image');
+  skillsImage.innerHTML = `<img src="./images/bg-about.svg" alt="">`;
+
+  skillsContainer.appendChild(skillsContent);
+  skillsContainer.appendChild(skillsImage);
+
+  // Projects
+  const projectsHeader = document.createElement('h2');
+  projectsHeader.innerHTML = '<i class="fa-solid fa-gears"></i> Projects';
+  skillsSection.appendChild(projectsHeader);
+
+  const projectsContainer = document.createElement('div');
+  projectsContainer.classList.add('projects-container');
+
+  projectsData.forEach(project => {
+    const projectBox = document.createElement('div');
+    projectBox.classList.add('box');
+    projectBox.innerHTML = `
+      <img src="${project.image}" alt="">
+      <h3>${project.title}</h3>
+      <p>${project.description}</p>
+      <div class="project-links">
+        <a href="${project.links.live}" target="_blank"><i class="fa-solid fa-link"></i></a>
+        <a href="${project.links.github}" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>`;
+    projectsContainer.appendChild(projectBox);
+  });
+
+  skillsSection.appendChild(skillsContainer);
+  skillsSection.appendChild(projectsContainer);
+
+  // Connect
+  const connectDiv = document.createElement('div');
+  connectDiv.classList.add('connect');
+  connectDiv.innerHTML = `<h2><i class="fa-brands fa-connectdevelop"></i>Let's Connect!</h2><p>I'm always on the lookout for exciting new opportunities to collaborate. Whether you have a project in mind or just want to network, feel free to reach out:</p>`;
+  skillsSection.appendChild(connectDiv);
+
+  // Education
+  const eduDiv = document.createElement('div');
+  eduDiv.classList.add('edu');
+
+  const eduHeader = document.createElement('h1');
+  eduHeader.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>Education';
+  eduDiv.appendChild(eduHeader);
+
+  const eduContainer = document.createElement('div');
+  eduContainer.classList.add('edu-container');
+
+  educationData.forEach(edu => {
+    const eduBox = document.createElement('div');
+    eduBox.classList.add('edu-box');
+    eduBox.innerHTML = `
+      <h3>${edu.university}</h3>
+      <h3 class="qualification">${edu.qualification}</h3>
+      <p>${edu.year}</p>
+      <p><span>Status:</span> ${edu.status}</p>`;
+    eduContainer.appendChild(eduBox);
+  });
+
+  eduDiv.appendChild(eduContainer);
+  skillsSection.appendChild(eduDiv);
+
+
+return skillsSection;
+}
+
+
+document.body.appendChild(createSkillsHTML());
+
+//footer
 let footer = document.createElement('footer');
 
 footer.innerHTML = `

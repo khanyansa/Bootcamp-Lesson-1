@@ -182,3 +182,34 @@ footer.innerHTML = `
 `;
 
 document.body.appendChild(footer);
+
+// Form Validation
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+function handleSubmit(event) {
+  event.preventDefault(); 
+  
+  const name = document.querySelector('input[name="Name"]').value.trim();
+  const surname = document.querySelector('input[name="Surname"]').value.trim();
+  const email = document.querySelector('input[name="Email"]').value.trim();
+  const phone = document.querySelector('input[name="Phone"]').value.trim();
+  const message = document.querySelector('textarea[name="Message"]').value.trim();
+
+  if (!name || !surname || !email || !phone || !message) {
+    alert('All fields are required');
+    return;
+  }
+
+  if (!isValidEmail(email)) {
+    alert('Please enter a valid email address');
+    return;
+  }
+
+  document.getElementById('myForm').submit();
+}
+
+document.querySelector('form').addEventListener('submit', handleSubmit);
+
